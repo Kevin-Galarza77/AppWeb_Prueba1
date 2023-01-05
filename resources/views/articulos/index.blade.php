@@ -33,10 +33,10 @@
                 <td>{{$articulo -> precio}}</td>
                 <td>
                     <form action="{{ route('articulos.destroy',$articulo->id) }}" method="POST">
-                        <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-info">Editar</a>
+                        <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-info m-2">Editar</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger m-2">Delete</button>
                     </form>
                 </td>
             </tr>

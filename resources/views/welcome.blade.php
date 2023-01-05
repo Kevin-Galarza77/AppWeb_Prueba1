@@ -31,7 +31,6 @@
                     <th scope="col">Descipciones</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">Precios</th>
-                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,14 +41,6 @@
                     <td>{{$articulo -> descripcion}}</td>
                     <td>{{$articulo -> cantidad}}</td>
                     <td>{{$articulo -> precio}}</td>
-                    <td>
-                        <form action="{{ route('articulos.destroy',$articulo->id) }}" method="POST">
-                            <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-info">Editar</a>
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                    </td>
                 </tr>
                 @endforeach
             </tbody>

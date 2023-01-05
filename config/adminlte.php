@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>JKG</b>',
+    'logo' => '<b>JKS</b>',
     'logo_img' => 'https://cdn-icons-png.flaticon.com/512/722/722502.png',
     'logo_img_class' => 'brand-image  elevation-3',
     'logo_img_xl' => null,
@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'articulos',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
