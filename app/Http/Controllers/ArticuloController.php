@@ -8,9 +8,6 @@ use Illuminate\Http\Request;
 class ArticuloController extends Controller
 {
 
-    public function __construct(){
-        $this->middleware('auth');
-    }
 
     /**
      * Display a listing of the resource.
@@ -61,7 +58,9 @@ class ArticuloController extends Controller
      */
     public function show($id)
     {
-        //
+        $articulo = Articulo::find($id);
+        
+        return view('articulos.show')->with('articulo', $articulo);
     }
 
     /**

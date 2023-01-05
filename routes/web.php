@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticuloController;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Models\Articulo;
 /*
@@ -13,21 +15,12 @@ use App\Models\Articulo;
 |
 */
 
-Route::get('/', function () {
-
-    $articulos = Articulo::all();
-    return view('welcome')->with('articulos', $articulos);
-});
-
-Route::resource('articulos', 'App\Http\Controllers\ArticuloController');
+Route::get('/', [Controller::class,'index'])->name('pagInicio');
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->get('/dashboard', function () {
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified'])->get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::resource('articulos', ArticuloController::class)->middleware(['auth']);
 

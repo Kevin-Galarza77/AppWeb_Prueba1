@@ -7,12 +7,12 @@
 @stop
 
 @section('content')
-    
+
 <form action="/articulos" method="POST">
-    @csrf
+  @csrf
   <div class="mb-3">
     <label for="" class="form-label">Código</label>
-    <input id="codigo" name="codigo" type="text" class="form-control" tabindex="1">    
+    <input id="codigo" name="codigo" type="text" class="form-control" tabindex="1">
   </div>
   <div class="mb-3">
     <label for="" class="form-label">Descripción</label>
@@ -32,9 +32,11 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+<link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+  console.log('Hi!');
+</script>
 @stop
