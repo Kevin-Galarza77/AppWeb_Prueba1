@@ -19,10 +19,10 @@
     </div>
 
     <h1 class="text-center my-5">Listado de Productos</h1>
+    <hr class="my-5">
+    <div class="container p-5 shadow-lg">
 
-    <div class="container pb-5">
-
-        <table id='articulos' class="table table-dark table-striped mt-4 shadow-lg mt-4">
+        <table id='articulos' class="table table-dark table-striped mt-4 mt-4">
 
             <thead class="text-light bg-primary">
                 <tr>

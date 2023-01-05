@@ -148,7 +148,7 @@ return [
     |
     */
 
-    'layout_topnav' => null,
+    'layout_topnav' => null,//barra arriba
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
@@ -257,7 +257,7 @@ return [
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
-    'password_reset_url' => 'forgot-password',
+    'password_reset_url' => 'register',
     'password_email_url' => 'login',
     'profile_url' => false,
 
@@ -314,13 +314,20 @@ return [
         [
             'text'        => 'Articulos',
             'url'         => 'articulos',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 'CRUD',
-            'label_color' => 'warning',
+            'icon'        => 'nav-icon fas fa-table',
+            'label'       => 'SHOW',
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Crear Articulo',
+            'url'         => 'articulos/create',
+            'icon'        => 'nav-icon fas fa-edit',
+            'label'       => 'CREATE',
+            'label_color' => 'primary',
         ],
         ['header' => 'Configuracion de la cuenta'],
         [
-            'text' => 'profile',
+            'text' => 'Perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],

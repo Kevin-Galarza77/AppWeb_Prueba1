@@ -50,6 +50,9 @@
         $ {{$articulo->precio}}
         </div>   
     </div>
+    <div class="row justify-content-end">
+        <a href="{{route('articulos.index')}}" class="btn btn-danger px-5">Regresar</a>
+    </div>
 </div>
 @stop
 

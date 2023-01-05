@@ -3,12 +3,12 @@
 @section('title', 'LOGIN - CRUD')
 
 @section('content_header')
-<h1>Listado de Productos</h1>
+<h1 class="text-center">Listado de Productos</h1>
 @stop
 
 @section('content')
 
-<a href="articulos/create" class="btn btn-outline-primary my-4">Crear</a>
+</div>
 <div class="container pb-5">
 
     <table id='articulos' class="table table-dark table-striped mt-4 shadow-lg mt-4">
@@ -33,11 +33,11 @@
                 <td>{{$articulo -> precio}}</td>
                 <td>
                     <form action="{{ route('articulos.destroy',$articulo->id) }}" method="POST">
-                        <a href="/articulos/{{$articulo->id}}" class="btn btn-success m-2">Ver</a>
-                        <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-primary m-2">Editar</a>
+                        <a href="/articulos/{{$articulo->id}}" class="btn btn-success m-1">Ver</a>
+                        <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-primary m-1">Editar</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger m-2">Delete</button>
+                        <button type="submit" class="btn btn-danger m-1">Delete</button>
                     </form>
                 </td>
             </tr>
